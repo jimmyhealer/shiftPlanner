@@ -1,7 +1,7 @@
 import React from 'react';
 import { Driver, DriverAssignment, Shift } from '@/types';
 import AssignmentBlock from './AssignmentBlock';
-import { timeToPosition, DRIVER_NAME_COLUMN_WIDTH, HOUR_WIDTH, START_HOUR, END_HOUR } from '@/utils/timeline/timeUtils';
+import { timeToPosition, DRIVER_NAME_COLUMN_WIDTH, HOUR_WIDTH, TIME_SLOT_WIDTH, START_HOUR, END_HOUR } from '@/utils/timeline/timeUtils';
 
 interface DriverRowProps {
   driver: Driver;
@@ -71,7 +71,7 @@ const DriverRow: React.FC<DriverRowProps> = ({
           <button
             className="absolute top-1/2 transform -translate-y-1/2 bg-green-500 hover:bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-lg z-30"
             style={{ 
-              left: `${timeToPosition(hoverPosition.time) + 10}px`,
+              left: `${timeToPosition(hoverPosition.time) + TIME_SLOT_WIDTH / 2 - 10}px`,
             }}
             onClick={() => onAddClick(driver.id, hoverPosition.time)}
             title={`在 ${hoverPosition.time} 加入排班`}
