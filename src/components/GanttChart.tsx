@@ -49,7 +49,11 @@ const GanttChart: React.FC = () => {
       <div className="mb-4 pb-2 border-b border-gray-200">
         <h2 className="text-xl font-bold text-gray-800">班表排程</h2>
         <p className="text-sm text-gray-600">
-          每個單位為 30 分鐘，可在空白區域點擊 + 新增排班
+          每個單位為 30 分鐘，每班次為 2 小時。可在空白區域點擊 + 新增排班 <br />
+          按住 Shift 點擊班別可以移除該司機的班別。
+        </p>
+        <p className="text-xs text-blue-600 mt-1">
+          💡 提示：未發班的時間段會以紅點顯示，方便識別需要安排的時段
         </p>
       </div>
 
