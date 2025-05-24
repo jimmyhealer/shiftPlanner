@@ -1,0 +1,83 @@
+/* Custom CSS for Frappe Gantt */
+
+/* Import Frappe Gantt base styles */
+@import 'frappe-gantt/dist/frappe-gantt.css';
+
+/* Customize the appearance */
+.gantt .bar {
+  fill: #dbeafe; /* light blue */
+  stroke: #93c5fd; /* blue border */
+}
+
+.gantt .bar-label {
+  fill: #1e3a8a; /* dark blue text */
+  font-size: 12px;
+}
+
+/* Custom colors for each shift */
+.gantt .bar.shift-a {
+  fill: #dbeafe; /* light blue for A班 */
+  stroke: #93c5fd;
+}
+
+.gantt .bar.shift-b {
+  fill: #fef3c7; /* light yellow for B班 */
+  stroke: #fcd34d;
+}
+
+.gantt .bar.shift-c {
+  fill: #dcfce7; /* light green for C班 */
+  stroke: #86efac;
+}
+
+/* Hover effects */
+.gantt .bar:hover {
+  fill-opacity: 0.8;
+  cursor: move;
+}
+
+/* Header styling */
+.gantt .grid-header {
+  fill: #f9fafb;
+  stroke: #e5e7eb;
+  font-size: 12px;
+}
+
+/* Today's date marker */
+.gantt .today-highlight {
+  fill: #fee2e2; /* light red */
+  opacity: 0.3;
+}
+
+/* Drop area when dragging */
+.gantt-drop-area {
+  background-color: rgba(147, 197, 253, 0.3);
+  border: 1px dashed #3b82f6;
+}
+
+/* Invalid drop area */
+.gantt-drop-area.invalid {
+  background-color: rgba(252, 165, 165, 0.3);
+  border: 1px dashed #ef4444;
+}
+
+/* Task info tooltip */
+.gantt-task-info {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.gantt-task-info-header {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.gantt-task-info-detail {
+  margin: 2px 0;
+  color: #4b5563;
+} 
